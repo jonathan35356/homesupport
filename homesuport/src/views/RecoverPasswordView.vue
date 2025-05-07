@@ -1,15 +1,17 @@
 <template>
-  <div class="container">
-    <h1>Recuperar Contraseña</h1>
-    <form>
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Escribe tu correo electrónico" />
+  <div class="fullscreen">
+    <div class="container">
+      <h1>Recuperar Contraseña</h1>
+      <form>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="Escribe tu correo electrónico" />
 
-      <div class="button-group">
-        <button type="button" class="cancel-button">Cancelar</button>
-        <button type="submit" class="submit-button">Recuperar contraseña</button>
-      </div>
-    </form>
+        <div class="button-group">
+          <button type="button" class="cancel-button">Cancelar</button>
+          <button type="submit" class="submit-button">Recuperar contraseña</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -18,19 +20,28 @@ export default {};
 </script>
 
 <style scoped>
+.fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
 .container {
   background-color: #fff;
   color: #000;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 50px auto;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 800px;
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -40,31 +51,39 @@ form {
 }
 
 label {
-  margin-bottom: 5px;
-  font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 input[type="email"] {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+  padding: 18px;
+  margin-bottom: 25px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 20px;
 }
 
 .button-group {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+}
+
+.cancel-button,
+.submit-button {
+  flex: 1;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .cancel-button {
-  padding: 10px;
   background-color: #ccc;
   color: #000;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
 }
 
 .cancel-button:hover {
@@ -72,17 +91,11 @@ input[type="email"] {
 }
 
 .submit-button {
-  padding: 10px;
   background-color: #000;
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
 }
 
 .submit-button:hover {
   background-color: #333;
 }
 </style>
-

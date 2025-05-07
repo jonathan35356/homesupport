@@ -14,10 +14,10 @@
       <h2>Bienvenido a HomeSupport</h2>
       <p>Resolvemos los problemas de tus dispositivos móviles sin que salgas de tu casa.</p>
       <div class="image-grid">
-        <img src="https://via.placeholder.com/150" alt="Imagen 1" />
-        <img src="https://via.placeholder.com/150" alt="Imagen 2" />
-        <img src="https://via.placeholder.com/150" alt="Imagen 3" />
-        <img src="https://via.placeholder.com/150" alt="Imagen 4" />
+        <img src="../assets/celulares.png" alt="celulares" />
+        <img src="../assets/auriculares.png" alt="auriculares" />
+        <img src="../assets/celular.png" alt="celular" />
+        <img src="../assets/persona.png" alt="Imagen 4" />
       </div>
     </main>
   </div>
@@ -54,15 +54,16 @@ body {
 }
 
 .nav .btn {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   margin: 0 10px;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
 .nav .btn:hover {
+  color: #fff;
   background-color: #555;
 }
 

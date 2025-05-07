@@ -1,20 +1,22 @@
 <template>
-  <div class="container">
-    <h1>Registrarme</h1>
-    <form>
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Escribe tu correo electrónico" />
+  <div class="fullscreen">
+    <div class="container">
+      <h1>Registrarme</h1>
+      <form>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="Escribe tu correo electrónico" />
 
-      <label for="password">Contraseña</label>
-      <input type="password" id="password" placeholder="Escribe tu contraseña" />
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="Escribe tu contraseña" />
 
-      <div class="checkbox-container">
-        <input type="checkbox" id="terms" />
-        <label for="terms">Acepto los términos y condiciones</label>
-      </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="terms" />
+          <label for="terms">Acepto los términos y condiciones</label>
+        </div>
 
-      <button type="submit">Registrarme</button>
-    </form>
+        <button type="submit">Registrarme</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -23,19 +25,28 @@ export default {};
 </script>
 
 <style scoped>
+.fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
 .container {
   background-color: #fff;
   color: #000;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 50px auto;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 800px; /* MÁS GRANDE */
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 40px; /* MUCHO MÁS GRANDE */
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -45,41 +56,44 @@ form {
 }
 
 label {
-  margin-bottom: 5px;
-  font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-input[type="email"],
-input[type="password"] {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.checkbox-container input {
-  margin-right: 10px;
+input {
+  padding: 18px;
+  margin-bottom: 25px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 21px;
 }
 
 button {
-  padding: 10px;
+  padding: 18px;
   background-color: #000;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 button:hover {
   background-color: #333;
 }
-</style>
 
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
