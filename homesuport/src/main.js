@@ -1,9 +1,8 @@
-import './assets/main.css'
-
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router' // Importa el router
+import './assets/global.css';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
 createApp(App)
-  .use(router) // Registra el router
-  .mount('#app')
+  .use(router)
+  .mount('#app');
