@@ -4,6 +4,8 @@ import LoginView from '../views/LoginView.vue';
 import RegisterView from '../views/RegisterView.vue';
 import RecoverPasswordView from '../views/RecoverPasswordView.vue';
 import ServicesView from '../views/ServicesView.vue';
+import RepairDetailsView from '../views/RepairDetailsView.vue';
+import PaymentConfirmationView from '../views/PaymentConfirmationView.vue';
 
 const routes = [
   {
@@ -30,6 +32,16 @@ const routes = [
     path: '/services',
     name: 'servicesView',
     component: ServicesView,
+  },
+  {
+    path: '/repair-details',
+    name: 'repair-details',
+    component: RepairDetailsView,
+  },
+  {
+    path: '/payment-confirmation',
+    name: 'payment-confirmation',
+    component: PaymentConfirmationView,
   },
 ];
 

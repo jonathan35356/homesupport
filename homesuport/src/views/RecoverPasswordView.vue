@@ -2,12 +2,12 @@
   <div class="fullscreen">
     <div class="container">
       <h1>Recuperar Contraseña</h1>
-      <form>
+      <form @submit.prevent="handleRecoverPassword">
         <label for="email">Correo electrónico</label>
         <input type="email" id="email" placeholder="Escribe tu correo electrónico" />
 
         <div class="button-group">
-          <button type="button" class="cancel-button">Cancelar</button>
+          <button type="button" class="cancel-button" @click="goToLogin">Cancelar</button>
           <button type="submit" class="submit-button">Recuperar contraseña</button>
         </div>
       </form>
@@ -16,7 +16,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    handleRecoverPassword() {
+      // Aquí puedes agregar lógica adicional para la recuperación de contraseña si es necesario
+      this.$router.push('/login'); // Redirige a la página de inicio de sesión
+    },
+    goToLogin() {
+      this.$router.push('/login'); // Redirige a la página de inicio de sesión al cancelar
+    },
+  },
+};
 </script>
 
 <style scoped>

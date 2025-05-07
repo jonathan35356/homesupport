@@ -2,7 +2,7 @@
   <div class="fullscreen">
     <div class="container">
       <h1>Iniciar Sesión</h1>
-      <form>
+      <form @submit.prevent="handleLogin">
         <label for="email">Correo electrónico</label>
         <input type="email" id="email" placeholder="Escribe tu correo electrónico" />
 
@@ -19,7 +19,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    handleLogin() {
+      // Aquí puedes agregar lógica adicional de autenticación si es necesario
+      this.$router.push('/services'); // Redirige a la vista de servicios
+    },
+  },
+};
 </script>
 
 <style scoped>

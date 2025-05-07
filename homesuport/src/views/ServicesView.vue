@@ -4,7 +4,7 @@
       <h1>SERVICIOS</h1>
     </header>
     <main class="services-grid">
-      <div class="service-card">
+      <div class="service-card" @click="goToRepairDetails">
         <img src="../assets/reparacion.png" alt="Reparación" />
         <h2>REPARACIÓN</h2>
         <p>Diagnosticamos fallos, sustituimos piezas dañadas y optimizamos el funcionamiento.</p>
@@ -29,7 +29,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    goToRepairDetails() {
+      this.$router.push('/repair-details'); // Redirige a la vista de detalles de reparación
+    },
+  },
+};
 </script>
 
 <style scoped>
